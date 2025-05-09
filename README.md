@@ -1,12 +1,51 @@
-# React + Vite
+# 📦 CATALOG - IS QR Code Box Management Project Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for the frontend of the QR code box management application. 
 
-Currently, two official plugins are available:
+## 🚀 Project Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**CATALOG**  - Transform your box organization with our digital solution. Easily generate QR codes through an intuitive interface, linking each box to its inventory for visual identification and optimized content control.
 
-## Expanding the ESLint configuration
+## 🚀 Project Description
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Our app gives you the power to create a customized box organization system through an elegant visual catalog. With an intuitive interface, you'll record the complete contents of each box—including name, quantity, and images of each item—while maintaining full control to edit, delete, or add details as your organization evolves. The system automatically generates unique QR codes for each container, allowing you to instantly access your complete digital inventory with a simple scan. This feature streamlines the efficient and effortless retrieval and management of your belongings or inventory. Its exceptional adaptability makes it the ideal tool for both a small business warehouse and for organizing your storage spaces at home.
+
+## 🛠️ Technologies Used
+
+* **⚛️ React 15.7:** JavaScript library for building interactive user interfaces.
+* **📜 JavaScript 6:** Primary programming language.
+* **🔗 Axios:** Promise-based HTTP client for making API requests.
+* **✨ CSS3:** Styles and visual design of the user interface. Any CSS library can be used to enhance user experience.
+
+## 🖥️ Installation and Execution (Frontend)
+
+To run the frontend part of this project, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <git@github.com:cat-a-log/FrontEnd.git>
+    cd frontend  # Or the folder where the frontend is located
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install  # Or yarn install
+    ```
+
+3.  **Configure environment variables (if necessary):**
+    Create a `.env` file in the root of the frontend project and define the necessary environment variables, such as the backend API URL:
+    ```
+    REACT_APP_API_BASE_URL=http://localhost:5173/
+    ```
+
+4.  **Run the application:**
+    ```bash
+    npm start  
+    ```
+
+    This will start the frontend application in development mode. Open your browser at `http://localhost:5173` (or the URL indicated in the console).
+
+## 🤝 Author
+* **Mariuxi Olaya:**
+    * GitHub: [catmaluci](https://github.com/catmaluci/)
+    * LinkedIn: [Mariuxi Olaya](https://www.linkedin.com/in/molaya)
