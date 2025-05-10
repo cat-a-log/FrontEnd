@@ -4,10 +4,13 @@ import "./boxSection.css"
 function BoxSection() {
 
    return (
-     <div className="box-section">
+   <div className="box-section">
+    <h3>My Boxes</h3>
+     <div className="boxes">
      <Box/>
      <Box/>
      <Box/>
+    </div>
     </div>
    )
 

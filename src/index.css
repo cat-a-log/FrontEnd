@@ -10,6 +10,7 @@
   --boxcontainer2-color: #7562E0;
   --boxcontainer3-color: #FA865F;
   --white: #ffffff;
+  --itembackground-color: #F5F5F5;
   background-color: var(--background-color);
 }
 

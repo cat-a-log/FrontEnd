@@ -1,0 +1,33 @@
+.search-section {
+  background-color: var(--white);
+  padding-bottom: 8%;
+  padding-top: 2%;
+
+}
+
+
+.items {
+  display: flex;
+  justify-content: center;
+  /* Centra el botón horizontalmente */
+  align-items: center;
+  /* Centra el botón verticalmente, si es necesario */
+  gap: 2%;
+  flex-direction: column;
+
+}
+
+H3 {
+  font-size: 2rem;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .items {
+    
+    /* Apila logo y enlaces verticalmente */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+  }
+}

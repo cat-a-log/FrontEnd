@@ -7,12 +7,8 @@ table{
 
 }
 
-
-
 .square {
   background-color: rgba(255, 255, 255, 0.3);
-
-  
    height: 10%;
    border-radius: 20px;;
 
@@ -32,4 +28,17 @@ table{
    font-weight: lighter;
    color: var(--white);
    
+}
+
+   @media screen and (max-width: 700px) {
+  table {
+    width: 50%;
+    padding: 5%;
+    margin-bottom: 20px; /* Agrega un espacio de 20px debajo de cada tabla */
+  }
+
+  .square {
+    height: 30%;
+  }
+  
 }
