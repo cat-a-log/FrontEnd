@@ -6,6 +6,10 @@
   --mouseover-color: #FF7663;
   --onclick-color: #FF7360;
   --background-color: #FFF8F2;
+  --boxcontainer1-color: #70D0DC;
+  --boxcontainer2-color: #7562E0;
+  --boxcontainer3-color: #FA865F;
+  --white: #ffffff;
   background-color: var(--background-color);
 }
 

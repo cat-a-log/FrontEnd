@@ -7,14 +7,17 @@ footer {
   bottom: 0;      /* Lo pega a la parte inferior */
   left: 0;        /* Lo extiende desde el borde izquierdo */
   width: 100%;    /* Lo extiende a todo el ancho */
+  
 }
 
 .footer-text{
   color: white;
+  
 }
 
 a {
     color: var(--main-color);
+    font-size: 1.2rem;
 }
 
 /* Media query para pantallas más pequeñas */

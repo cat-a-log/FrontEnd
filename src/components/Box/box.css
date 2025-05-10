@@ -1,0 +1,35 @@
+table{
+    
+    background-color: var(--boxcontainer1-color);
+    width: 15%;
+    border-radius: 20px;
+    padding: 1%;
+
+}
+
+
+
+.square {
+  background-color: rgba(255, 255, 255, 0.3);
+
+  
+   height: 10%;
+   border-radius: 20px;;
+
+}
+.empty-space {
+   width: 80%;
+   height: 20px;
+}
+
+
+.box-name{
+    color: var(--white);
+}
+.location {
+    /* display: flex;
+    flex-direction: column; */
+   font-weight: lighter;
+   color: var(--white);
+   
+}

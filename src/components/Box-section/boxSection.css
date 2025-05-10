@@ -1,0 +1,8 @@
+.box-section{
+  
+    display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  align-items: center;     /* Centra el botón verticalmente, si es necesario */
+gap: 2%;
+
+}

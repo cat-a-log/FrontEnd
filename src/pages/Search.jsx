@@ -4,10 +4,10 @@ import { SearchButton } from '../components/Button';
 import Footer from '../components/Footer';
 import SearchBar from '../components/SearchBar';
 import TitleHome from '../components/Titles/titleHome';
+import Box from '../components/Box';
 
-import BoxSection from '../components/Box-section';
 
-function Home() {
+function Search() {
  
   const handleSearchButton=() => console.log('clickSearch')
   return (
@@ -19,7 +19,7 @@ function Home() {
        <div className='button'>
        <SearchButton onClick={handleSearchButton}/>
        </div>
-        <BoxSection/>
+      
        <Footer/> 
       </div>
       
@@ -27,4 +27,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Search;
