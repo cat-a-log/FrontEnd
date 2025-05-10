@@ -1,18 +1,23 @@
 
-import './App.css'
-import MyButtons from './components/buttonVariantions'
+import Header from './components/Header';
+import  {SearchButton } from './components/Button'; 
+import Main_App from './components/Mains/App/main';
 
 function App() {
-  const handleSearchClick = (buttonName) => {
-    console.log(`"${buttonName}" button clicked! Performing search...`);
-    // Add your search functionality here
-  };
-
+ 
+  const handleSearchButton=() => console.log('clickSearch')
   return (
-  <div>
-      <h1>catalog</h1>
-      <MyButtons buttonToShow="search" /> {/* Only the button with name "search" will be rendered */}
-    </div>
+    
+      <>
+       <Header/>
+       <Main_App/>
+    
+      <div>
+       <a>Effortlessly identify box contents and minimize errors. Our user-friendly QR code solution simplifies organization for businesses and homes alike.</a>
+       <SearchButton onClick={handleSearchButton}/>
+       </div>
+      </>
+  
   );
 }
 

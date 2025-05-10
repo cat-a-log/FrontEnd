@@ -1,0 +1,32 @@
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  align-items: center;     /* Centra el botón verticalmente, si es necesario */
+  /* Si el contenedor no tiene una altura definida, align-items no tendrá efecto. */
+  height: 100vh; /* Ejemplo: Centrar verticalmente en toda la ventana */
+}
+
+.baseButton {
+  background-color: var(--main-color); 
+  color: white;
+  display: flex; /* Activa flexbox para centrar */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 17.8rem;
+  padding: 1.5rem 2rem;
+  gap: 0.625rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.baseButton:hover {
+  background-color: var(--mouseover-color); 
+}
+.baseButton:focus,
+.baseButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  background-color: var(--onclick-color); 
+}
