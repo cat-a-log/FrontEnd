@@ -1,0 +1,32 @@
+
+footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 0.5vh; /* Espacio alrededor del contenido */
+  position: fixed; /*Fija el footer a la ventana del navegador*/
+  bottom: 0;      /* Lo pega a la parte inferior */
+  left: 0;        /* Lo extiende desde el borde izquierdo */
+  width: 100%;    /* Lo extiende a todo el ancho */
+}
+
+.footer-text{
+  color: white;
+}
+
+a {
+    color: var(--main-color);
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  footer {
+    padding-top: 2%; 
+    padding-bottom: 2%;
+    position: relative; /*Fija el footer a la ventana del navegador*/
+
+ 
+  }
+  a {
+    font-size: 1.1em;
+}
+}

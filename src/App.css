@@ -1,19 +1,58 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.container {
+  background-color: var(--background-color);
+  
+ 
+  /* display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center; */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.subtext {
+  width: auto; /* Ajusta el ancho al contenido y los márgenes */
+  margin: 0 25%; /* Añade un margen del 5% a la izquierda y a la derecha */
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background-color: brown; */
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: lightskyblue; */
+  padding: 1rem; /* Añade un poco de espacio alrededor del botón */
+}
+
+/* Estilos generales para párrafos */
+p {
+  font-size: 1.2rem; /* Tamaño de fuente base para párrafos */
+  line-height: 1.5; /* Mejora la legibilidad del texto */
+  margin-bottom: 1rem; /* Espacio debajo de cada párrafo */
+}
+
+@media screen and (max-width: 700px) {
+  p {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente en pantallas pequeñas */
+    margin: 0 0%;
+  }
+
+  .subtext {
+    margin: 2%; /* Reduce los márgenes en pantallas pequeñas si es necesario */
+    padding: 0%; /* Ajusta el padding para compensar el margen reducido */
+  }
+
+  .button {
+    padding: 0.75rem; /* Reduce el padding del botón en pantallas pequeñas */
+  }
 }
