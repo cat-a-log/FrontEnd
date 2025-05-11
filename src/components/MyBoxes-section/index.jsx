@@ -1,7 +1,8 @@
 
 import Box from '../Box'
-import "./boxSection.css"
-function BoxSection() {
+import "./myBoxesSection.css"
+
+function MyBoxSection() {
 
    return (
    <div className="box-section">
@@ -15,4 +16,4 @@ function BoxSection() {
    )
 
 }
-export default BoxSection
+export default MyBoxSection

@@ -1,35 +1,42 @@
-
-
 .content-text {
-  width: auto; /* Ajusta el ancho al contenido y los márgenes */
-  margin: 0% 25%; /* Añade un margen del 5% a la izquierda y a la derecha */
+  width: auto;
+  margin: 0% 25%;
   margin-top: 5%;
   padding: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* background-color: brown; */
+
+}
+
+.content-text-1line {
+  width: auto;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .content-text p {
-  margin-bottom: 1rem; /* Espacio entre párrafos */
-  line-height: 1.6; /* Mejora la legibilidad del texto */
-  
+  margin-bottom: 1rem;
+  line-height: 1.6;
+
 }
 
 @media screen and (max-width: 700px) {
   .content-main {
-    flex-direction: column; /* Los elementos se apilan verticalmente */
-    padding: 0rem; /* Reduce el padding en pantallas pequeñas */
-    margin-top: 4rem; /* Reduce el margen superior en pantallas pequeñas */
+    flex-direction: column;
+    padding: 0rem;
+    margin-top: 4rem;
   }
 
-  .content-text {
-    /* width: 95%; Ocupa más ancho en pantallas pequeñas */
-    margin: 1rem; /* Reduce el margen vertical */
+  .content-text,
+  .content-text-1line {
+
+    margin: 1rem;
     margin-top: 20%;
-    padding: 1.5rem; /* Reduce el padding en pantallas pequeñas */
-    font-size: 1.1rem; /* Aumenta ligeramente el tamaño del texto para mejor lectura */
+    font-size: 1.1rem;
   }
 }

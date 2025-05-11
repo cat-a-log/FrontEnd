@@ -19,7 +19,7 @@ var login = false;
             </div>
             :<div className="divPages">
                 <Link to={"/search"} className="divLink">Search</Link>
-                <Link to={"/signup"} className="divLink">Create a Box</Link>
+                <Link to={"/createBox"} className="divLink">Create a Box</Link>
             </div>
 }
         </nav>

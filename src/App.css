@@ -4,25 +4,21 @@
 
 }
 
+
 .container {
   background-color: var(--background-color);
-  
- 
-  /* display: flex;
-  flex-direction: column;
-   align-items: center;
-  justify-content: center; */
+
 }
 
 .subtext {
-  width: auto; /* Ajusta el ancho al contenido y los márgenes */
-  margin: 0 25%; /* Añade un margen del 5% a la izquierda y a la derecha */
+  width: auto;
+  margin: 0 25%;
   padding: 0%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* background-color: brown; */
+
 }
 
 .button {
@@ -30,29 +26,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: lightskyblue; */
-  padding: 1rem; /* Añade un poco de espacio alrededor del botón */
+  padding: 1rem;
 }
 
-/* Estilos generales para párrafos */
-p {
-  font-size: 1.2rem; /* Tamaño de fuente base para párrafos */
-  line-height: 1.5; /* Mejora la legibilidad del texto */
-  margin-bottom: 1rem; /* Espacio debajo de cada párrafo */
+.buttons-double {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
 }
+
+.qr-in-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
 
 @media screen and (max-width: 700px) {
   p {
-    font-size: 1.5rem; /* Aumenta el tamaño de la fuente en pantallas pequeñas */
+    font-size: 1.5rem;
     margin: 0 0%;
   }
 
   .subtext {
-    margin: 2%; /* Reduce los márgenes en pantallas pequeñas si es necesario */
-    padding: 0%; /* Ajusta el padding para compensar el margen reducido */
+    margin: 2%;
+    padding: 0%;
   }
 
   .button {
-    padding: 0.75rem; /* Reduce el padding del botón en pantallas pequeñas */
+    padding: 0.75rem;
   }
-}

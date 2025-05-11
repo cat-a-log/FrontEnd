@@ -4,8 +4,7 @@ import { SearchButton } from '../components/Button';
 import Footer from '../components/Footer';
 import SearchBar from '../components/SearchBar';
 import TitleHome from '../components/Titles/titleHome';
-
-import BoxSection from '../components/Box-section';
+import MyBoxesSection from '../components/MyBoxes-section';
 
 function Home() {
  
@@ -19,7 +18,7 @@ function Home() {
        <div className='button'>
        <SearchButton onClick={handleSearchButton}/>
        </div>
-        <BoxSection/>
+        <MyBoxesSection/>
        <Footer/> 
       </div>
       
