@@ -6,9 +6,9 @@ function TitleBoxDetails() {
   return (
    
      
-        <div className="content-text">
+        <div className="content-text-1line">
           <h1>
-            Box Name 
+            Box Name
           </h1>
         </div>
         

@@ -7,7 +7,7 @@
 
 .container {
   background-color: var(--background-color);
- 
+  
 }
 
 .subtext {
@@ -39,6 +39,12 @@
   gap: 1rem;
 }
 
+.qr-in-page{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
 
 
 p {
@@ -62,3 +68,4 @@ p {
   .button {
     padding: 0.75rem; 
 }
+

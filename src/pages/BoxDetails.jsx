@@ -1,27 +1,25 @@
-
-import Header from '../components/Header';
-import { DeleteBoxButton, UpdateBoxButton } from '../components/Button';
-import Footer from '../components/Footer';
-import TitleBoxDetails from '../components/Titles/titleBoxDetails';
+import Header from "../components/Header";
+import { DeleteBoxButton, UpdateBoxButton } from "../components/Button";
+import Footer from "../components/Footer";
+import TitleBoxDetails from "../components/Titles/titleBoxDetails";
 import BoxDetailsSection from "../components/BoxDetails-section";
+import QR from "../components/QR";
 
 function BoxDetails() {
- 
-  const handleUpdateBoxButton=() => console.log('clickUpdateBoxButton')
   return (
-    
-      <div className='container'>
-       <Header/>
-       <TitleBoxDetails/>
-       <div className='buttons-double'>
-       <UpdateBoxButton onClick={handleUpdateBoxButton}/>
-       <DeleteBoxButton/>
-       </div>
-       <BoxDetailsSection />
-       <Footer/> 
+    <div className="container">
+      <Header />
+      <TitleBoxDetails />
+      <div className="qr-in-page">
+        <QR />
+        <div className="buttons-double">
+          <UpdateBoxButton />
+          <DeleteBoxButton />
+        </div>
       </div>
-      
-  
+      <BoxDetailsSection />
+      <Footer />
+    </div>
   );
 }
 
