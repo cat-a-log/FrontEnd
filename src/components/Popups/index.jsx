@@ -6,7 +6,7 @@ import { YesButton, NoButton } from "../Button";
 function PopupDelete() {
   return (
       <div className="popup-container"> 
-      <p> Are you sure you want to delete your box?</p>
+      <p> Deleting the box will erase all its content. Are you sure to continue?</p>
        <div className="buttons-double-popup">
           <YesButton />
           <NoButton />

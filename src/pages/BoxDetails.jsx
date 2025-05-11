@@ -9,7 +9,7 @@ import PopupDelete from "../components/Popups";
 function BoxDetails() {
   return (
     <div className="container">
-      <PopupDelete/>
+    
       <Header />
       <TitleBoxDetails />
       <div className="qr-in-page">
