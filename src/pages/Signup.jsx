@@ -3,7 +3,7 @@ import { SignupButton} from "../components/Button";
 import Footer from "../components/Footer";
 import FormSignup from "../components/Forms/formSignup";
 import TitleSignup from "../components/Titles/titleSignup";
-import EmptySection from "../components/Empty-section";
+
 
 function Signup() {
    

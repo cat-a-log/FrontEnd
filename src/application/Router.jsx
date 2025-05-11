@@ -4,6 +4,7 @@ import Login from "../pages/Login"
 import Signup from "../pages/Signup"
 import Home from "../pages/Home"
 import Search from "../pages/Search"
+import CreateBox from "../pages/CreateBox"
 
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/search" element={<Search />} />
+                 <Route path="/createBox" element={<CreateBox />} />
             </Routes>
 
         </BrowserRouter>
