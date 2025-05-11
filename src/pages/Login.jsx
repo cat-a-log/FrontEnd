@@ -10,7 +10,7 @@ function Login() {
     <div className="container">
       <Header />
       <TitleLogin />
-      <FormLogin />
+      <FormLogin/>
       <div className="button">
         <LoginButton/>
       </div>

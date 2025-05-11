@@ -1,20 +1,20 @@
 import "./forms.css";
 
-function FormLogin() {
+function FormSignup() {
   return (
-    <form className="form-login">
+     <form className="form-login">
       <input
         class="form-email-password"
         type="email"
-        placeholder="Email"
+        placeholder="Email | Ex: julia@prettywoman.com"
       />
        <input
         class="form-email-password"
         type="password"
-        placeholder="Password"
+        placeholder="Password | Validation text to add"
       />
     </form>
   );
 }
 
-export default FormLogin;
+export default FormSignup;

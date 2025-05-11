@@ -5,6 +5,7 @@ footer {
   padding: 0.5vh; 
   bottom: 0;      
   left: 0;       
+  position: fixed; 
   width: 100%;    
   
 }
@@ -24,7 +25,7 @@ a {
   footer {
     padding-top: 2%; 
     padding-bottom: 2%;
-    position: relative; 
+    position: fixed; 
 
  
   }

@@ -1,0 +1,16 @@
+.empty-section {
+  background-color: var(--backgroundcolor);
+  padding-bottom: 8%;
+  padding-top: 2%;
+  height: 20%;
+
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+.empty-section{
+   height: 150px;
+}
+}
