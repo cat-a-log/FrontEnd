@@ -10,15 +10,15 @@ function Item() {
         </div>
         <div class="info-container">
             <h2 class="title">Christmas Lights</h2>
-            <p class="location">Attic</p>
+            <p class="location-item">Attic</p>
             <p class="quantity">105</p>
             <p class="date">22-08-2023</p>
         </div>
         <div class="icons-container">
-            <div class="edit-button">
+            <button class="edit-button">
                 <i class="fas fa-pencil"></i>
                 <span class="action-text">EDIT</span>
-            </div>
+            </button>
             <div class="separator"></div>
             <button class="delete-button">
                 <i class="fa-regular fa-trash-can"></i>

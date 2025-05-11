@@ -1,4 +1,3 @@
-
 import "./button.css";
 
 function Button({ children, onClick }) {
@@ -9,18 +8,21 @@ function Button({ children, onClick }) {
   );
 }
 
-function SearchButton({onClick}) {
-
+function SearchButton({ onClick }) {
   return <Button onClick={onClick}>SEARCH</Button>;
 }
 
-function CreateBoxButton({onClick}) {
-  
+function CreateBoxButton({ onClick }) {
   return <Button onClick={onClick}>CREATE A BOX</Button>;
 }
 
+function LoginButton({ onClick }) {
+  return <Button onClick={onClick}>LOGIN</Button>;
+}
 
+function SignupButton({ onClick }) {
+  return <Button onClick={onClick}>SIGNUP</Button>;
+}
 
 export default Button;
-export { SearchButton, CreateBoxButton };
-
+export { SearchButton, CreateBoxButton, LoginButton, SignupButton };

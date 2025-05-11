@@ -9,7 +9,7 @@ var login = false;
    return (
       <nav>
             <div className="divLogo">
-                <Link to={"/"}>
+                <Link to={"/home"}>
                     <img className="logo" src={logo} alt="Catalog logo" />
                     </Link>
             </div>
@@ -18,7 +18,7 @@ var login = false;
                 <Link to={"/signup"} className="divLink">Sign Up</Link>
             </div>
             :<div className="divPages">
-                <Link to={"/home"} className="divLink">Search</Link>
+                <Link to={"/search"} className="divLink">Search</Link>
                 <Link to={"/signup"} className="divLink">Create a Box</Link>
             </div>
 }
