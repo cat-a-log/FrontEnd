@@ -1,19 +1,19 @@
 import Header from "../components/Header";
-import { CreateBoxButton} from "../components/Button";
+import { AddItemButton} from "../components/Button";
 import Footer from "../components/Footer";
-import TitleCreateBox from "../components/Titles/titleCreateBox";
-import FormCreateBox from "../components/Forms/formCreateBox";
+import TitleAddItem from "../components/Titles/titleAddItem";
 import EmptySection from "../components/Empty-section";
+import FormAddItem from "../components/Forms/formAddItem";
 
-function CreateBox() {
+function AddItem() {
    
   return (
     <div className="container">
       <Header />
-      <TitleCreateBox />
-      <FormCreateBox />
+      <TitleAddItem />
+      <FormAddItem />
       <div className="button">
-        <CreateBoxButton/>
+        <AddItemButton/>
       </div>
         <EmptySection/>
       <Footer/>
@@ -21,4 +21,4 @@ function CreateBox() {
   );
 }
 
-export default CreateBox;
+export default AddItem;

@@ -7,7 +7,7 @@
 }
 
 
-.form-email-password, .form-createBox-info, .form-createBox-addimage  {
+.form-email-password, .form-createBox-info, .form-createBox-addimage {
   border-color: var(--main-color); 
   display: flex;  
   justify-content: center;  
@@ -29,6 +29,7 @@
     
 }
 
+
 .form-createBox-addimage {
 
   border: 2px solid var(--main-color);  
@@ -37,7 +38,7 @@
 }
 
 @media screen and (max-width: 700px) {
-.form-email-password, .form-createBox-info, .form-createBox-addimage   {
+.form-email-password, .form-createBox-info, .form-createBox-addimage {
      width: 80%;
      
 }

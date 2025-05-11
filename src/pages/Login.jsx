@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import TitleLogin from "../components/Titles/titleLogin";
 import FormLogin from "../components/Forms/formLogin";
 
+
 function Login() {
    
   return (
@@ -14,7 +15,9 @@ function Login() {
       <div className="button">
         <LoginButton/>
       </div>
-      <Footer />
+     
+      <Footer/>
+      
     </div>
   );
 }

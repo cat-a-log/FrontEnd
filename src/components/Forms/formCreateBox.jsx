@@ -1,3 +1,4 @@
+
 import "./forms.css";
 
 function FormCreateBox() {
@@ -18,12 +19,9 @@ function FormCreateBox() {
         type="textarea"
         placeholder="Description of your box or content- max 100 characters"
       />
-         <input
-        class="form-createBox-addimage"
-        type="file"
-       
-      />
+     
     </form>
+  
   );
 }
 

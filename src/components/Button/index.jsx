@@ -24,5 +24,9 @@ function SignupButton({ onClick }) {
   return <Button onClick={onClick}>SIGNUP</Button>;
 }
 
+function AddItemButton({ onClick }) {
+  return <Button onClick={onClick}>ADD AN ITEM</Button>;
+}
+
 export default Button;
-export { SearchButton, CreateBoxButton, LoginButton, SignupButton };
+export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton };
