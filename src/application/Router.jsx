@@ -6,6 +6,7 @@ import Home from "../pages/Home"
 import Search from "../pages/Search"
 import AddItem from "../pages/AddItem"
 import CreateBox from "../pages/CreateBox"
+import BoxDetails from "../pages/BoxDetails"
 
 
 
@@ -20,6 +21,7 @@ function Router() {
                 <Route path="/search" element={<Search />} />
                 <Route path="/createbox" element={<CreateBox />} />
                 <Route path="/additem" element={<AddItem />} />
+                <Route path="/boxdetails" element={<BoxDetails/>} />
             </Routes>
 
         </BrowserRouter>

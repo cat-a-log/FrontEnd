@@ -28,5 +28,22 @@ function AddItemButton({ onClick }) {
   return <Button onClick={onClick}>ADD AN ITEM</Button>;
 }
 
+function UpdateBoxButton({ onClick }) {
+  return <Button onClick={onClick}>UPDATE BOX</Button>;
+}
+
+function DeleteBoxButton({ onClick }) {
+  return <Button className="deleteButton" onClick={onClick}>DELETE BOX</Button>;
+}
+
+function YesButton({ onClick }) {
+  return <Button onClick={onClick}>YES</Button>;
+}
+
+function NoButton({ onClick }) {
+  return <Button onClick={onClick}>NO</Button>;
+}
+
+
 export default Button;
-export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton };
+export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton, UpdateBoxButton, DeleteBoxButton, YesButton, NoButton };

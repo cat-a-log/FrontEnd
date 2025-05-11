@@ -1,7 +1,7 @@
 
-import Item from '../Item'
-import AddItem from '../Item/add-item'
+
 import "./searchSection.css"
+import ItemShow from '../Item/item-show'
 
 function SearchSection() {
 
@@ -9,8 +9,8 @@ function SearchSection() {
    <div className="search-section">
     <h3>Items Founded</h3>
      <div className="items">
-     <Item/>
-     <Item/>
+     <ItemShow/>
+     <ItemShow/>
     
     </div>
     </div>
