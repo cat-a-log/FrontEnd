@@ -38,16 +38,22 @@ nav {
  
 }
 
+
 .divLink {
   text-decoration: none;
   transition: color 0.3s ease;
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 1.2rem;
+ 
 }
 
 .divLink:hover {
   color: var(--mouseover-color);
+  border-bottom: 2px solid var(--mouseover-color);
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+  padding-bottom: 0;
 }
 
 .profile-icon{
