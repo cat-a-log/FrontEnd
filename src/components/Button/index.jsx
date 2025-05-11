@@ -17,11 +17,11 @@ function CreateBoxButton({ onClick }) {
 }
 
 function LoginButton({ onClick }) {
-  return <Button onClick={onClick}>LOGIN</Button>;
+  return <Button onClick={onClick}>LOG IN</Button>;
 }
 
 function SignupButton({ onClick }) {
-  return <Button onClick={onClick}>SIGNUP</Button>;
+  return <Button onClick={onClick}>SIGN UP</Button>;
 }
 
 function AddItemButton({ onClick }) {
