@@ -41,7 +41,7 @@ function DeleteBoxButton({ onClick }) {
 }
 
 function NoButton({ onClick }) {
-  return <button onClick={onClick}>NO</button>;
+  return <button className="deleteButton" onClick={onClick}>NO</button>;
 }
 
 

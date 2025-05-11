@@ -4,10 +4,12 @@ import Footer from "../components/Footer";
 import TitleBoxDetails from "../components/Titles/titleBoxDetails";
 import BoxDetailsSection from "../components/BoxDetails-section";
 import QR from "../components/QR";
+import PopupDelete from "../components/Popups";
 
 function BoxDetails() {
   return (
     <div className="container">
+      <PopupDelete/>
       <Header />
       <TitleBoxDetails />
       <div className="qr-in-page">
