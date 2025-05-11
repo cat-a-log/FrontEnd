@@ -32,18 +32,18 @@ function UpdateBoxButton({ onClick }) {
   return <Button onClick={onClick}>UPDATE BOX</Button>;
 }
 
-function DeleteBoxButton({ onClick }) {
-  return <Button className="deleteButton" onClick={onClick}>DELETE BOX</Button>;
-}
-
 function YesButton({ onClick }) {
   return <Button onClick={onClick}>YES</Button>;
 }
 
+function DeleteBoxButton({ onClick }) {
+  return <button className="deleteButton" onClick={onClick}>DELETE BOX</button>;
+}
+
 function NoButton({ onClick }) {
-  return <Button onClick={onClick}>NO</Button>;
+  return <button onClick={onClick}>NO</button>;
 }
 
 
 export default Button;
-export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton, UpdateBoxButton, DeleteBoxButton, YesButton, NoButton };
+export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton, UpdateBoxButton, YesButton, DeleteBoxButton,  NoButton };

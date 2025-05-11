@@ -17,7 +17,7 @@ function Item() {
         <div class="icons-container">
             <button class="edit-button">
                 <i class="fas fa-pencil"></i>
-                <span class="action-text">EDIT</span>
+                <span class="action-text-active">EDIT</span>
             </button>
             <div class="separator"></div>
             <button class="delete-button">

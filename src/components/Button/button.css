@@ -5,9 +5,10 @@
   height: 100vh; 
 }
 
-.baseButton {
-  background-color: var(--main-color); 
-  color: white;
+.baseButton,
+.deleteButton {
+
+  color: var(--white);
   display: flex; 
   justify-content: center;
   align-items: center; 
@@ -20,16 +21,20 @@
   transition: background-color 0.3s ease;
 }
 
+.baseButton {
+    background-color: var(--main-color); 
+}
 
-.baseButton:hover {
+.baseButton:hover,
+.deleteButton:hover {
   background-color: var(--mouseover-color); 
 }
 .baseButton:focus,
-.baseButton:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.baseButton:focus-visible,
+.deleteButton {
   background-color: var(--onclick-color); 
 }
 
 .deleteButton {
-  background-color: grey!important;
+  background-color: var(--secondary-color);
 }
