@@ -58,10 +58,12 @@ p, h4, .highlight-color-underline {
 }
 
 @media screen and (max-width: 700px) {
-  p, h4, .highlight-color-underline {
+   h4, .highlight-color-underline {
     font-size: 1.5rem;
     margin: 0 0%;
   }
+
+ 
 
   .subtext {
     margin: 2%;
