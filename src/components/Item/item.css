@@ -1,33 +1,31 @@
-
 .item-container,
 .add-item-container {
-  background-color: var(--itembackground-color);  
+  background-color: var(--itembackground-color);
   /* width: 60%;  */
-  border-radius: 20px;  
-  padding: 15px;  
-  display: flex;  
-  flex-direction: row; 
-  align-items: center;  
-  gap: 20px;  
-  margin-bottom: 20px;  
-  border: none; 
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  border: none;
 }
 
 .add-item-container {
   background-color: var(--background-color);
-    width: 30%;  
+  width: 30%;
 }
 
 .image-container,
-.button-add-item 
- {
-  width: 15%;  
-  height: 15%;  
-  border-radius: 10px;  
-  overflow: hidden;  
+.button-add-item {
+  width: 15%;
+  height: 15%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.button-container, 
+.button-container,
 .add-item-container {
   border: none;
   cursor: pointer;
@@ -35,14 +33,14 @@
 
 .image-container img,
 .button-container img {
-  width: 100%;  
-  height: 100%; 
-  object-fit: cover;  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
 .info-container {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 
@@ -50,7 +48,7 @@
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 1.2em;
-  text-align: left; 
+  text-align: left;
 }
 
 .location-item,
@@ -104,11 +102,11 @@
 }
 
 @media screen and (max-width: 700px) {
-  .item-container{
+  .item-container {
     width: 90%;
   }
 
-  .add-item-container{
+  .add-item-container {
     width: 60%;
   }
 

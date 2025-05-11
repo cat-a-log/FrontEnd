@@ -10,7 +10,7 @@
 
 
 @media screen and (max-width: 700px) {
-.empty-section{
-   height: 150px;
-}
+  .empty-section {
+    height: 150px;
+  }
 }

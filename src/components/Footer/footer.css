@@ -6,12 +6,12 @@ footer {
     left: 0;
     position: fixed;
     width: 100%;
-  
+
 
 }
 
 .footer-text {
-    color: white;
+    color: var(--white);
 
 }
 
