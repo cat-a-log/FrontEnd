@@ -4,21 +4,21 @@ function ItemShow() {
 
    return (
     
-   <div class="item-container">
-        <div class="image-container">
+   <div className="item-container">
+        <div className="image-container">
             <img src="/src/assets/item_christmas.png" alt="Christmas Lights"/>
         </div>
-        <div class="info-container">
-            <h2 class="title">Christmas Lights</h2>
-            <p class="location-item">Attic</p>
-            <p class="quantity">105</p>
-            <p class="date">22-08-2023</p>
+        <div className="info-container">
+            <h2 className="title">Christmas Lights</h2>
+            <p className="location-item">Attic</p>
+            <p className="quantity">105</p>
+            <p className="date">22-08-2023</p>
         </div>
-        <div class="icons-container">
-            <div class="separator"></div>
-            <button class="show-button">
-                <i class=""></i>
-                <span class="action-text">SHOW</span>
+        <div className="icons-container">
+            <div className="separator"></div>
+            <button className="show-button">
+                <i className=""></i>
+                <span className="action-text">SHOW</span>
             </button>
         </div>
     </div>
