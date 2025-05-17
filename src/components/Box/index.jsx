@@ -1,11 +1,14 @@
+import { useNavigate } from 'react-router'
 import './box.css'
 
 function Box({box}) {
-
+  const navigate = useNavigate ();
+  const handleClick = () => {
+  navigate ("/boxdetails/" + box.id)
+}
    return (
 
-
-    <button className="box-container-button">
+    <button className="box-container-button" onClick={handleClick}>
     <div className="box-header">
       <div className="square"></div>
      
