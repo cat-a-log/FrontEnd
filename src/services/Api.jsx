@@ -33,6 +33,11 @@ export const getAPI = async (endpoint) => {
   if (!response.ok) {
     throw new Error("Something went wrong");
   }
+  if (response.status !== 200) {
+    return {}
+  }
+
+  return await response.json();
 }
 
 export const patchAPI = async (endpoint) => {
@@ -49,8 +54,12 @@ export const patchAPI = async (endpoint) => {
   if (!response.ok) {
     throw new Error("Something went wrong");
   }
+  if (response.status !== 200) {
+    return {}
+  }
 
   return await response.json();
+ 
 }
 
 export const deleteAPI = async (endpoint) => {

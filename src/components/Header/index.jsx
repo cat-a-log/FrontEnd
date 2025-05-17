@@ -20,7 +20,7 @@ var login = false;
             :<div className="divPages">
                 <Link to={"/search"} className="divLink">Search</Link>
                 <Link to={"/createBox"} className="divLink">Create a Box</Link> 
-                <img class="profile-icon" src={Logged} alt="user logged icon" />    
+                <img className="profile-icon" src={Logged} alt="user logged icon" />    
             </div>
 }
         </nav>

@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const getCurrentUser = async () => {
     setLoading(true);
     try {
-      const data = getAPI("/me");
+      const data = await getAPI("/me");
       setUser(data);
     } catch (error) {
       setUser(null);
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      postAPI("/auth/signin", { email, password });
+      await postAPI("/auth/signin", { email, password });
       await getCurrentUser();
 
       return true;
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (email, password) => {
     try {
-      postAPI("/auth/signup", { email, password });
+      await postAPI("/auth/signup", { email, password });
       await getCurrentUser();
 
       return true;

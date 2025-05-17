@@ -18,14 +18,14 @@ function FormLogin({}) {
   return (
     <form className="form-login" onSubmit={handleSubmit}>
       <input
-        class="form-email-password"
+        className="form-email-password"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(event)=> setEmail(event.target.value)}
       />
        <input
-        class="form-email-password"
+        className="form-email-password"
         type="password"
         placeholder="Password"
          value={password}

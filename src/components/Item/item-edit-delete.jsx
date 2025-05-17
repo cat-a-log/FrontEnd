@@ -4,25 +4,25 @@ function Item() {
 
    return (
     
-   <div class="item-container">
-        <div class="image-container">
+   <div className="item-container">
+        <div className="image-container">
             <img src="/src/assets/item_christmas.png" alt="Christmas Lights"/>
         </div>
-        <div class="info-container">
-            <h2 class="title">Christmas Lights</h2>
-            <p class="location-item">Attic</p>
-            <p class="quantity">105</p>
-            <p class="date">22-08-2023</p>
+        <div className="info-container">
+            <h2 className="title">Christmas Lights</h2>
+            <p className="location-item">Attic</p>
+            <p className="quantity">105</p>
+            <p className="date">22-08-2023</p>
         </div>
-        <div class="icons-container">
-            <button class="edit-button">
-                <i class="fas fa-pencil"></i>
-                <span class="action-text-active">EDIT</span>
+        <div className="icons-container">
+            <button className="edit-button">
+                <i className="fas fa-pencil"></i>
+                <span className="action-text-active">EDIT</span>
             </button>
-            <div class="separator"></div>
-            <button class="delete-button">
-                <i class="fa-regular fa-trash-can"></i>
-                <span class="action-text">DELETE</span>
+            <div className="separator"></div>
+            <button className="delete-button">
+                <i className="fa-regular fa-trash-can"></i>
+                <span className="action-text">DELETE</span>
             </button>
         </div>
     </div>

@@ -38,7 +38,7 @@ function FormSignup() {
   return (
      <form className="form-login"  onSubmit={handleSubmit}>
       <input
-        class="form-email-password"
+        className="form-email-password"
         type="email"
         required
         minlength="7"
@@ -49,7 +49,7 @@ function FormSignup() {
       />
       {emailError && <p className="error-message">{emailError}</p>} {}
        <input
-        class="form-email-password"
+        className="form-email-password"
         type="password"
         required
         minlength="4"
