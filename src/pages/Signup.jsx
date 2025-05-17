@@ -15,6 +15,7 @@ function Signup() {
       <div className="button">
         <SignupButton/>
       </div>
+       <h4>Do you have an account? <a class ="highlight-color-underline" href="/login">Log in</a></h4>
       <Footer />
     </div>
   );

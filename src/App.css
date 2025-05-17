@@ -6,8 +6,10 @@
 
 
 .container {
-  background-color: var(--background-color);
-
+  /* background-color: var(--background-color); */
+  background-image: url("./assets/background_elements.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .subtext {
@@ -47,18 +49,28 @@
 }
 
 
-p {
+p, h4, .highlight-color-underline {
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: 1.5rem;
   margin-bottom: 1rem;
 }
 
+.highlight-color-underline {
+  color: orangered;
+}
 
 @media screen and (max-width: 700px) {
-  p {
+
+   h4, .highlight-color-underline{
     font-size: 1.5rem;
     margin: 0 0%;
   }
+
+ .container {
+   background-image: url("./assets/background_elements-mobile.svg");
+  background-size: 130% ;
+  
+ }
 
   .subtext {
     margin: 2%;
@@ -68,3 +80,4 @@ p {
   .button {
     padding: 0.75rem;
   }
+}

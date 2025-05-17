@@ -34,24 +34,35 @@ nav {
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
-  margin-right: 8rem;/
+  margin-right: 8rem;
+ 
 }
+
 
 .divLink {
   text-decoration: none;
   transition: color 0.3s ease;
   color: var(--secondary-color);
   font-weight: bold;
+  font-size: 1.2rem;
+ 
 }
 
 .divLink:hover {
   color: var(--mouseover-color);
+  border-bottom: 2px solid var(--mouseover-color);
+  border-bottom-left-radius: 2.5px;
+  border-bottom-right-radius: 2.5px;
+  padding-bottom: 0;
+}
 
+.profile-icon{
+  width: 2rem;
 }
 
 @media screen and (max-width: 700px) {
   .logo {
-    height: 3.1rem;
+    height: 4.1rem;
   }
 
   nav {
@@ -76,4 +87,13 @@ nav {
     align-items: center;
     gap: 0.5rem;
   }
+.divLink {
+  font-size: 1.2rem;
+  
+}
+
+.profile-icon{
+  width: 1.5rem;
+}
+
 }

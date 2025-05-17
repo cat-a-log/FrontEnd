@@ -1,18 +1,14 @@
-
-import './title.css'
-
+import "./title.css";
 
 function TitleApp() {
   return (
-   
-     
-        <div className="content-text">
-          <h1>
-            Get the smart solution for box identification that you need. 
-          </h1>
-        </div>
-        
-    
+    <div className="content-text">
+      <h1>
+        Get The Smart Solution For 
+        <span className="highlight-color-titles"> Box Identification </span> That
+        You Need.
+      </h1>
+    </div>
   );
 }
 

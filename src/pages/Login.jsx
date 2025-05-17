@@ -15,11 +15,11 @@ function Login() {
       <div className="button">
         <LoginButton/>
       </div>
-     
+      <h4>Not register yet? <a class ="highlight-color-underline" href="/signup">Sign up</a></h4>
       <Footer/>
       
     </div>
-  );
+  );  
 }
 
 export default Login;
