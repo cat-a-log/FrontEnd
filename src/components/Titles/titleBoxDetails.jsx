@@ -1,11 +1,11 @@
 import "./title.css";
 
-function TitleBoxDetails() {
+function TitleBoxDetails({title}) {
   return (
     <div className="content-text-1line">
       <h1>
         Box
-        <span className="highlight-color-titles"> Name </span>
+        <span className="highlight-color-titles"> {title} </span>
       </h1>
     </div>
   );
