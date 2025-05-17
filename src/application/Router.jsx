@@ -7,12 +7,14 @@ import Search from "../pages/Search"
 import AddItem from "../pages/AddItem"
 import CreateBox from "../pages/CreateBox"
 import BoxDetails from "../pages/BoxDetails"
+import {AuthProvider} from "../AuthContext"
 
 
 
 function Router() {
     return (
         <BrowserRouter>
+        <AuthProvider> 
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/login" element={<Login />} />
@@ -23,7 +25,7 @@ function Router() {
                 <Route path="/additem" element={<AddItem />} />
                 <Route path="/boxdetails" element={<BoxDetails/>} />
             </Routes>
-
+    </AuthProvider>
         </BrowserRouter>
 
     )
