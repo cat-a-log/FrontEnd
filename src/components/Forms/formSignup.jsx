@@ -10,7 +10,7 @@ function FormSignup() {
     const {signup} = useAuth();
 
     const isEmailValid = (email) => {
-      const forbiddenChars = /[&_=+\-,<>']|\.{2,}/;
+      const forbiddenChars = /[&=+\,<>']|\,{2,}/;
       return !forbiddenChars.test(email);
     };
 
@@ -18,7 +18,7 @@ function FormSignup() {
       const newEmail = event.target.value;
       setEmail(newEmail);
       if (!isEmailValid(newEmail)) {
-        setEmailError("This symbols are not allowed &, =, _, ', -, +, ,, <, >, .");
+        setEmailError("These symbols are not allowed &, =, ', +, ,, <, >, .");
       } else {
         setEmailError(""); 
       }
@@ -41,8 +41,8 @@ function FormSignup() {
         className="form-email-password"
         type="email"
         required
-        minlength="7"
-        maxlength="20"
+        minLength="7"
+        maxLength="20"
         placeholder="Email | Ex: julia@prettywoman.com"
         value={email}
         onChange={handleEmailChange}
@@ -52,8 +52,8 @@ function FormSignup() {
         className="form-email-password"
         type="password"
         required
-        minlength="4"
-        maxlength="30"
+        minLength="4"
+        maxLength="30"
         placeholder="Password | Minimun 4 characters"
          value={password}
         onChange={(event)=> setPassword(event.target.value)}

@@ -20,18 +20,13 @@ function Router() {
             <Route index element={<App />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
-            <Route
-              path="home"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="search" element={<Search />} />
-            <Route path="createbox" element={<CreateBox />} />
-            <Route path="additem" element={<AddItem />} />
-            <Route path="boxdetails" element={<BoxDetails />} />
+            <Route element = {<ProtectedRoute />}>
+                <Route path="home" element={<Home /> } />
+                <Route path="search" element={<Search />} />
+                <Route path="createbox" element={<CreateBox />} />
+                <Route path="additem" element={<AddItem />} />
+                <Route path="boxdetails" element={<BoxDetails />} />
+            </Route>
           </Route>
         </Routes>
       </AuthProvider>
