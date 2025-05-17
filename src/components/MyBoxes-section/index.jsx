@@ -2,15 +2,16 @@
 import Box from '../Box'
 import "./myBoxesSection.css"
 
-function MyBoxSection() {
+
+function MyBoxSection({boxes}) {
 
    return (
    <div className="box-section">
     <h3>My Boxes</h3>
      <div className="boxes">
-     <Box/>
-     <Box/>
-     <Box/>
+      {boxes.map(box => (
+       <Box key={box.id} box={box}/>
+      ))}
     </div>
     </div>
    )

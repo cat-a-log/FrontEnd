@@ -1,6 +1,6 @@
 import './box.css'
 
-function Box() {
+function Box({box}) {
 
    return (
 
@@ -11,8 +11,8 @@ function Box() {
      
     </div>
     <div className="box-info">
-      <h3 className="box-name">Box Name</h3>
-      <p className="location">Location</p>
+      <h3 className="box-name">{box.name}</h3>
+      <p className="location">{box.location}</p>
     </div>
     </button>
 
