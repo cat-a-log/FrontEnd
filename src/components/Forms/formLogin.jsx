@@ -2,15 +2,18 @@ import "./forms.css";
 import { LoginButton} from "../Button";
 import { useState } from "react";
 import { useAuth } from "../../AuthContext";
+import { useNavigate } from "react-router";
 
 function FormLogin({}) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const {login} = useAuth()
+  const navigate = useNavigate()
   const handleSubmit = async (event) => {
+
     event.preventDefault()
     const logIn = await login(email, password)
-    console.log (logIn)
+    navigate ("/home")
   }
   return (
     <form className="form-login" onSubmit={handleSubmit}>

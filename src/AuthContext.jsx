@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { getAPI, postAPI } from "./services/Api";
 
 const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
@@ -7,15 +8,8 @@ export const AuthProvider = ({ children }) => {
   const getCurrentUser = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8080/api/me",{
-        credentials:"include"
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setUser(data);
-      } else {
-        setUser(null);
-      }
+      const data = getAPI("/me");
+      setUser(data);
     } catch (error) {
       setUser(null);
     } finally {
@@ -25,37 +19,23 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-        const response = await fetch("http://localhost:8080/api/auth/signin", {
-            method:"POST",
-            headers:{'Content-Type': 'application/json'},
-            body: JSON.stringify({email, password})
-        })
-        if (response.ok) {
-            await getCurrentUser();
-            return true;
-        } else {
-            return false;
-        }
+      postAPI("/auth/signin", { email, password });
+      await getCurrentUser();
+
+      return true;
     } catch {
-        return false; 
+      return false;
     }
   };
 
   const signup = async (email, password) => {
     try {
-        const response = await fetch("http://localhost:8080/api/auth/signup", {
-            method:"POST",
-            headers:{'Content-Type': 'application/json'},
-            body: JSON.stringify({email, password})
-        })
-        if (response.ok) {
-            await getCurrentUser();
-            return true;
-        } else {
-            return false;
-        }
+      postAPI("/auth/signup", { email, password });
+      await getCurrentUser();
+
+      return true;
     } catch {
-        return false; 
+      return false;
     }
   };
 
