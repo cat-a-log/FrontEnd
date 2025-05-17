@@ -47,6 +47,7 @@
   .form-createBox-info,
   .form-createBox-addimage {
     width: 80%;
+    font-size: 1.1rem;
 
   }
 }
