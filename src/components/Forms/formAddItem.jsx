@@ -1,5 +1,6 @@
 
 import "./forms.css";
+import { AddItemButton} from "../Button";
 
 function FormAddItem() {
   return (
@@ -19,6 +20,9 @@ function FormAddItem() {
         type="file"
        
       />
+      <div className="button">
+        <AddItemButton/>
+      </div>
     </form>
   
   );

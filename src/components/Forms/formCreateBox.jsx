@@ -1,5 +1,6 @@
 
 import "./forms.css";
+import { CreateBoxButton} from "../Button";
 
 function FormCreateBox() {
   return (
@@ -19,7 +20,9 @@ function FormCreateBox() {
         type="textarea"
         placeholder="Description of your box or content- max 100 characters"
       />
-     
+      <div className="button">
+        <CreateBoxButton/>
+      </div>
     </form>
   
   );

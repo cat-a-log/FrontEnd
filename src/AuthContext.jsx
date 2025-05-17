@@ -41,11 +41,29 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const signup = async (email, password) => {
+    try {
+        const response = await fetch("http://localhost:8080/api/auth/signup", {
+            method:"POST",
+            headers:{'Content-Type': 'application/json'},
+            body: JSON.stringify({email, password})
+        })
+        if (response.ok) {
+            await getCurrentUser();
+            return true;
+        } else {
+            return false;
+        }
+    } catch {
+        return false; 
+    }
+  };
+
   useEffect(() => {
     getCurrentUser();
   }, []);
   return (
-    <AuthContext.Provider value={{ user, loading, login }}>
+    <AuthContext.Provider value={{ user, loading, login, signup }}>
       {children}
     </AuthContext.Provider>
   );
