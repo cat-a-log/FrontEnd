@@ -25,7 +25,7 @@ function Router() {
                 <Route path="search" element={<Search />} />
                 <Route path="createbox" element={<CreateBox />} />
                 <Route path="additem" element={<AddItem />} />
-                <Route path="boxdetails" element={<BoxDetails />} />
+                <Route path="boxdetails/:id" element={<BoxDetails />} />
             </Route>
           </Route>
         </Routes>
