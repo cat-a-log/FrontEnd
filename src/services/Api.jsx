@@ -47,8 +47,8 @@ export const getAPI = async (endpoint) => {
   return await response.json();
 }
 
-export const patchAPI = async (endpoint) => {
-  const response = await fetch("http://localhost:8080/api" + endpoint, {
+export const patchAPI = async (endpoint, body) => {
+  const response = await fetch("http://localhost:8080/api" + endpoint,  {
     method: "PATCH",
     headers: {
       Accept: 'application/json',
@@ -58,16 +58,23 @@ export const patchAPI = async (endpoint) => {
     credentials: "include",
   });
 
+  if (response.status === 400) {
+    return {
+      error: true, 
+      response:await response.json(),
+    }
+  
+  }
   if (!response.ok) {
     throw new Error("Something went wrong");
-  }
-  if (response.status !== 200) {
-    return {}
+
   }
 
-  return await response.json();
- 
-}
+   return {
+      error: false, 
+      response:await response.json(),
+    } 
+  }
 
 export const deleteAPI = async (endpoint) => {
   const response = await fetch("http://localhost:8080/api" + endpoint, {

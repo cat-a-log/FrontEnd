@@ -12,6 +12,8 @@
   
 }
 
+
+
 .box-header {
   display: flex;
   align-items: center;
@@ -30,16 +32,19 @@
 
 .box-info {
   width: 100%;
-  text-align: left;
+  
 }
 
 .box-name {
   font-size: 1.2em;  
   margin-bottom: 0;
   color: var(--white);
+  
 }
 
 .location {
-  font-size: 0.9em;
+ font-size: 1em;
  color: var(--white);
+ font-weight:medium;
+ text-align: center;
 }

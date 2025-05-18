@@ -10,7 +10,7 @@ function Item({item}) {
         </div>
         <div className="info-container">
             <h2 className="title">{item.name}</h2>
-            <p className="quantity">105</p>
+            <p className="quantity">{item.quantity}</p>
             <p className="date">22-08-2023</p>
         </div>
         <div className="icons-container">

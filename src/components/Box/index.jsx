@@ -15,7 +15,7 @@ function Box({box}) {
     </div>
     <div className="box-info">
       <h3 className="box-name">{box.name}</h3>
-      <p className="location">{box.location}</p>
+      <p className="location">&#9873; {box.location}</p>
     </div>
     </button>
 
