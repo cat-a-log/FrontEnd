@@ -1,6 +1,6 @@
 import './item.css'
 
-function Item() {
+function Item({item}) {
 
    return (
     
@@ -9,8 +9,7 @@ function Item() {
             <img src="/src/assets/item_christmas.png" alt="Christmas Lights"/>
         </div>
         <div className="info-container">
-            <h2 className="title">Christmas Lights</h2>
-            <p className="location-item">Attic</p>
+            <h2 className="title">{item.name}</h2>
             <p className="quantity">105</p>
             <p className="date">22-08-2023</p>
         </div>
