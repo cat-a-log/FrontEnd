@@ -9,16 +9,23 @@ export const postAPI = async (endpoint, body = null) => {
     credentials: "include",
   });
 
+  if (response.status === 400) {
+    return {
+      error: true, 
+      response:await response.json(),
+    }
+  
+  }
   if (!response.ok) {
     throw new Error("Something went wrong");
+
   }
 
-  if (response.status !== 200) {
-    return {}
+   return {
+      error: false, 
+      response:await response.json(),
+    } 
   }
-
-  return await response.json();
-}
 
 export const getAPI = async (endpoint) => {
   const response = await fetch("http://localhost:8080/api" + endpoint, {
