@@ -45,7 +45,7 @@ function FormSignup() {
         required
         minLength="7"
         maxLength="20"
-        placeholder="Email | Ex: julia@prettywoman.com"
+        placeholder={`\uD83D\uDCE7 Email | Ex: julia@prettywoman.com`}
         value={email}
         onChange={handleEmailChange}
       />
@@ -56,7 +56,7 @@ function FormSignup() {
         required
         minLength="4"
         maxLength="30"
-        placeholder="Password | Minimun 4 characters"
+        placeholder={`\uD83D\uDD12 Password | Minimun 4 characters`}
         value={password}
         onChange={(event) => setPassword(event.target.value)}
       />

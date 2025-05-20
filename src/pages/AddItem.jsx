@@ -10,8 +10,7 @@ function AddItem() {
     
       <TitleAddItem />
       <FormAddItem />
-      
-        <EmptySection/>
+      <EmptySection/>
    
     </>
   );

@@ -9,13 +9,17 @@
 .boxes {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     gap: 2%;
-
+    flex-wrap: wrap; 
+    overflow: hidden; 
+    
 }
 
 H3 {
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 

@@ -12,9 +12,7 @@ function Search() {
       
       <TitleHome />
       <SearchBar />
-      <div className="button">
-        <SearchButton onClick={handleSearchButton} />
-      </div>
+      
       <SearchSection />
     
     </>

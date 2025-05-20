@@ -1,14 +1,18 @@
 import "./forms.css";
-import { LoginButton} from "../Button";
+import { LoginButton } from "../Button";
 import { useState } from "react";
 import { useAuth } from "../../AuthContext";
 import { useNavigate } from "react-router";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+
 
 function FormLogin({}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
-  const {login} = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const isEmailValid = (email) => {
@@ -32,7 +36,9 @@ function FormLogin({}) {
       await login(email, password);
       navigate("/home");
     } else {
-      setEmailError("Please, introduce a valid email without special characters.");
+      setEmailError(
+        "Please, introduce a valid email without special characters."
+      );
       console.log("the email content characters not valid.");
     }
   };
@@ -45,23 +51,31 @@ function FormLogin({}) {
         required
         minLength="7"
         maxLength="20"
-        placeholder="Email | Ex: julia@prettywoman.com"
+       placeholder={`\uD83D\uDCE7 Email | Ex: julia@prettywoman.com`}
         value={email}
         onChange={handleEmailChange}
       />
       {emailError && <p className="error-message">{emailError}</p>}
       <input
         className="form-email-password"
-        type="password"
+        type={showPassword ? "text" : "password"}
         required
         minLength="4"
         maxLength="30"
-        placeholder="Password | Minimun 4 characters"
-         value={password}
-        onChange={(event)=> setPassword(event.target.value)}
+        placeholder=  {`\uD83D\uDD12 Password | Minimun 4 characters`}
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
       />
-       <div className="button">
-        <LoginButton/>
+      <button
+        type="button"
+        className="password-toggle-button"
+        onClick={() => setShowPassword(!showPassword)}
+      >
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </button>
+
+      <div className="button">
+        <LoginButton />
       </div>
     </form>
   );
