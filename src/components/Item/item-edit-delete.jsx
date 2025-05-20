@@ -11,7 +11,7 @@ function Item({item}) {
         <div className="info-container">
             <h2 className="title">{item.name}</h2>
             <p className="quantity">{item.quantity}</p>
-            <p className="date">22-08-2023</p>
+            <p className="date">{item.createdAt}</p>
         </div>
         <div className="icons-container">
             <button className="edit-button">

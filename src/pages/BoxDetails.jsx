@@ -58,7 +58,7 @@ function BoxDetails() {
               <DeleteBoxButton onClick={handleDelete} />
             </div>
           </div>
-          <BoxDetailsSection items={box.items} />
+          <BoxDetailsSection items={box.items} box={box} />
         </>
       )}
     </>

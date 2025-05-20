@@ -13,7 +13,7 @@ function FormAddItem() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await postAPI("/additem", {name, quantity,});
+    await postAPI(`/box/${id}/item`, {name, quantity,});
     Navigate("/home");
     
   //   const isValid = true;

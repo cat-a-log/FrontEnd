@@ -3,11 +3,11 @@ import AddItemIcon from "/src/assets/add_item.svg";
 import { useNavigate } from "react-router";
 
 
-function AddItem() {
+function AddItem({box}) {
 const navigate = useNavigate();
 
 const handleAddItemClick = () => {
-  navigate('/additem');
+  navigate('/additem/' + box.id);
 };
   
   return (
