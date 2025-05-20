@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import {postAPI} from "../../services/Api"
 
-function FormAddItem() {
+function FormAddItem({box}) {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [nameError, setNameError] = useState("");
@@ -13,8 +14,8 @@ function FormAddItem() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await postAPI(`/box/${id}/item`, {name, quantity,});
-    Navigate("/home");
+    await postAPI(`/box/${box.id}/item`, {name, quantity,});
+    navigate(`/boxdetails/${box.id}`);
     
   //   const isValid = true;
 
