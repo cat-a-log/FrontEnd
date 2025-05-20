@@ -1,8 +1,9 @@
-.qr-container {
+/* .qr-container {
   width: 15%;
   height: 15%;
   border-radius: 10px;
   overflow: hidden;
+  
 
 }
 
@@ -11,6 +12,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 
 @media screen and (max-width: 700px) {
@@ -20,4 +22,4 @@
     height: auto;
 
   }
-}
+} */

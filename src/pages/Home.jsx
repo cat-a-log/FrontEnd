@@ -1,6 +1,3 @@
-
-
-import { SearchButton } from '../components/Button';
 import SearchBar from '../components/SearchBar';
 import TitleHome from '../components/Titles/titleHome';
 import MyBoxesSection from '../components/MyBoxes-section';
@@ -9,7 +6,7 @@ import { getAPI } from '../services/Api';
 
 function Home() {
   const [boxes, setBoxes] = useState ([])
-  const handleSearchButton=() => console.log('clickSearch')
+  
 
   useEffect (()=> {
     const getBoxes = async() => {
@@ -27,10 +24,7 @@ function Home() {
       <>
        <TitleHome/>
        <SearchBar/>
-       <div className='button'>
-       <SearchButton onClick={handleSearchButton}/>
-       </div>
-        <MyBoxesSection boxes = {boxes}/>
+       <MyBoxesSection boxes = {boxes}/>
       
       </>
       

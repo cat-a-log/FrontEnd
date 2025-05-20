@@ -1,6 +1,8 @@
 import "./forms.css";
 import { AddItemButton } from "../Button";
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import {postAPI} from "../../services/Api"
 
 function FormAddItem() {
   const [name, setName] = useState("");
@@ -11,33 +13,36 @@ function FormAddItem() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const isValid = true;
+    await postAPI("/additem", {name, quantity,});
+    Navigate("/home");
+    
+  //   const isValid = true;
 
-    if (name.trim() === "") {
-      setNameError("Item needs to be filled");
-      isValid = false;
-    } else {
-      setNameError("");
-    }
+  //   if (name.trim() === "") {
+  //     setNameError("Item needs to be filled");
+  //     isValid = false;
+  //   } else {
+  //     setNameError("");
+  //   }
 
-    if (quantity.trim() === "") {
-      setQuantityError("Quantity needs to be filled");
-      isValid = false;
-    } else if (isNaN(quantity) || parseInt(quantity) <= 0) {
-      setQuantityError("Minimum quantity is 1");
-      isValid = false;
-    } else {
-      setQuantityError("");
-    }
+  //   if (quantity.trim() === "") {
+  //     setQuantityError("Quantity needs to be filled");
+  //     isValid = false;
+  //   } else if (isNaN(quantity) || parseInt(quantity) <= 0) {
+  //     setQuantityError("Minimum quantity is 1");
+  //     isValid = false;
+  //   } else {
+  //     setQuantityError("");
+  //   }
 
-    if (isValid) {
+  //   if (isValid) {
      
-      console.log("ok", { name, quantity, image });
-      setName("");
-      setQuantity("");
-      setImage(null);
-    }
-  };
+  //     console.log("ok", { name, quantity, image });
+  //     setName("");
+  //     setQuantity("");
+  //     setImage(null);
+  //   }
+   };
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);

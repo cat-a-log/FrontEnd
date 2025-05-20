@@ -1,5 +1,5 @@
 import "./forms.css";
-import { CreateBoxButton } from "../Button";
+import { CreateBoxButton, UpdateBoxButton } from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { postAPI, patchAPI } from "../../services/Api";
@@ -102,7 +102,8 @@ function FormCreateBox({box}) {
 
 
   <div className="button">
-    <CreateBoxButton />
+    {/* <CreateBoxButton /> */}
+    {box ? <UpdateBoxButton /> : <CreateBoxButton />}
   </div>
 </form>
   );

@@ -83,7 +83,6 @@ export const deleteAPI = async (endpoint) => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
     credentials: "include",
   });
 
