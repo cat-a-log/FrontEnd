@@ -1,9 +1,17 @@
 import "./item.css";
 import AddItemIcon from "/src/assets/add_item.svg"; 
+import { useNavigate } from "react-router";
+
 
 function AddItem() {
+const navigate = useNavigate();
+
+const handleAddItemClick = () => {
+  navigate('/additem');
+};
+  
   return (
-    <button className="add-item-container"> 
+    <button className="add-item-container" onClick={handleAddItemClick}> 
       <div className="image-container "> 
         <img src={AddItemIcon} alt="add_item_button" />
       </div>
@@ -12,6 +20,6 @@ function AddItem() {
       </div>
     </button>
   );
-}
+}  
 
 export default AddItem;

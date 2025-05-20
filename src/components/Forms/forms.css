@@ -1,12 +1,13 @@
 .form-login,
-.form-style {
+.form-style{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.form-label {
+.form-label
+ {
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -15,10 +16,24 @@
   width: 40%; 
 }
 
+.password-toggle-button {
+ position: absolute;
+ align-items: right;
+  right: 30%;
+  top: 52%; 
+  /* transform: translateY(-280%); */
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 .form-email-password,
 .form-info,
-.form-addimage {
+.form-addimage
+ {
   border-color: var(--main-color);
+  position: relative;
   display: flex;
   align-items: center;
   width: 40%;
@@ -32,6 +47,9 @@
   margin-bottom: 2%;
 }
 
+.form-email-password{
+  padding-right: 30px;
+}
 .form-info {
   height: 0.7rem;
 }
@@ -65,4 +83,15 @@
     width: 80%;
     font-size: 1.1rem;
   }
+
+
+.password-toggle-button {
+  right: 3em;
+  top: 50%; 
+  transform: translateY(-680%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 }

@@ -10,8 +10,7 @@ function CreateBox() {
    
       <TitleCreateBox />
       <FormCreateBox />
-     
-        <EmptySection/>
+      <EmptySection/>
    
     </>
   );
