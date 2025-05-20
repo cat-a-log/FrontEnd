@@ -21,9 +21,13 @@ export const postAPI = async (endpoint, body = null) => {
 
   }
 
+  let responseBody = {}
+  if (response.status === 200) {
+    responseBody = await response.json()
+  }
    return {
       error: false, 
-      response:await response.json(),
+      response: responseBody
     } 
   }
 
