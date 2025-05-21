@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getAPI, postAPI } from "./services/Api";
 
+
 const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -32,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     try {
       await postAPI("/auth/signup", { email, password });
       await getCurrentUser();
-
+      navigate('/home');
       return true;
     } catch {
       return false;
