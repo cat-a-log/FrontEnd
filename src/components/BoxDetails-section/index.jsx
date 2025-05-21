@@ -12,7 +12,7 @@ function BoxDetailsSection({items, box}) {
      <div className="items">
      <AddItem box = {box}/>
       {items.map(item => (
-       <Item key={item.id} item={item}/>
+       <Item key={item.id} item={item} box={box}/>
       ))}
     
     </div>

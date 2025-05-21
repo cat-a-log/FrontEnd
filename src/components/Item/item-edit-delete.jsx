@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router'
 import { deleteAPI } from "../../services/Api";
 
 
-function Item({item}) {
+function Item({item, box}) {
     const navigate = useNavigate();
     const handleEdit = () => {
         navigate (`/updateitem/${item.id}`)
@@ -15,7 +15,7 @@ function Item({item}) {
           try {
             await deleteAPI(`/item/${itemId}`); 
             console.log(`Item with ID ${itemId} deleted successfully`); 
-            navigate('/home');
+            navigate(`/boxdetails/${box.id}`); 
           } catch (error) {
             console.error("Error deleting box:", error);
           }  
