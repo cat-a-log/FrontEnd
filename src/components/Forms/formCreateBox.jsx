@@ -102,7 +102,7 @@ function FormCreateBox({box}) {
 
 
   <div className="button">
-    {/* <CreateBoxButton /> */}
+   
     {box ? <UpdateBoxButton /> : <CreateBoxButton />}
   </div>
 </form>
