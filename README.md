@@ -1,5 +1,5 @@
-# 📦 CATALOG - IS QR Code Box Management Project Frontend
-![Capturas de pantalla de la aplicación](src/assets/demo-overview.png "Interfaz de la aplicación")
+# 📦 CATALOG - QR Code Box Management Project Frontend
+![Capturas de pantalla de la aplicación](src/assets/demo-overview_updated.png "Interfaz de la aplicación")
 This repository contains the source code for the frontend of the QR code box management application. 
 
 ## Objective
@@ -14,7 +14,6 @@ Our app gives you the power to create a customized box organization system throu
 
 * **⚛️ React 15.7:** JavaScript library for building interactive user interfaces.
 * **📜 JavaScript 6:** Primary programming language.
-* **🔗 Axios:** Promise-based HTTP client for making API requests.
 * **✨ CSS3:** Styles and visual design of the user interface. Any CSS library can be used to enhance user experience.
 
 ## 🖥️ Installation and Execution (Frontend)
