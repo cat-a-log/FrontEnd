@@ -1,5 +1,5 @@
 
-import { SearchButton } from "../components/Button";
+
 
 import SearchBar from "../components/SearchBar";
 import TitleHome from "../components/Titles/titleHome";

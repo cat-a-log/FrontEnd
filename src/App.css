@@ -6,7 +6,7 @@
 
 
 .container {
-  /* background-color: var(--background-color); */
+
   background-image: url("./assets/background_elements.svg");
   background-repeat: no-repeat;
   background-size: auto;
