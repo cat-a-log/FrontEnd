@@ -1,8 +1,8 @@
 # 📦 CATALOG - IS QR Code Box Management Project Frontend
-
+![Capturas de pantalla de la aplicación](src/assets/demo-overview.png "Interfaz de la aplicación")
 This repository contains the source code for the frontend of the QR code box management application. 
 
-## 🚀 Project Objective
+## Objective
 
 **CATALOG**  - Transform your box organization with our digital solution. Easily generate QR codes through an intuitive interface, linking each box to its inventory for visual identification and optimized content control.
 
