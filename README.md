@@ -28,7 +28,7 @@ To run the frontend part of this project, follow these steps:
 
 2.  **Install dependencies:**
     ```bash
-    npm install  # Or yarn install
+    npm install   
     ```
 
 3.  **Configure environment variables (if necessary):**
@@ -39,7 +39,7 @@ To run the frontend part of this project, follow these steps:
 
 4.  **Run the application:**
     ```bash
-    npm start  
+    npm run dev # Or npm start 
     ```
 
     This will start the frontend application in development mode. Open your browser at `http://localhost:5173` (or the URL indicated in the console).
