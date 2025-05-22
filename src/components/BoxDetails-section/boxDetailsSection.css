@@ -1,0 +1,30 @@
+.search-section {
+  background-color: var(--white);
+  padding-bottom: 8%;
+  padding-top: 2%;
+
+}
+
+
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  flex-direction: column;
+
+}
+
+H3 {
+  font-size: 2rem;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .items {
+    align-items: center;
+
+  }
+}

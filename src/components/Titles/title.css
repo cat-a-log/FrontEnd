@@ -1,0 +1,48 @@
+.content-text {
+  width: auto;
+  margin: 0% 25%;
+  margin-top: 5%;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.content-text-1line {
+  width: auto;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+
+}
+
+ .highlight-color-titles{
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+
+@media screen and (max-width: 700px) {
+  .content-main {
+    flex-direction: column;
+    padding: 0rem;
+    margin-top: 4rem;
+  }
+
+  .content-text,
+  .content-text-1line {
+
+    margin: 1rem;
+    margin-top: 20%;
+    font-size: 1.1rem;
+  }
+}

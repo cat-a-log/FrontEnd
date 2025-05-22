@@ -1,0 +1,97 @@
+.form-login,
+.form-style{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label
+ {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color); 
+  text-align: left;
+  width: 40%; 
+}
+
+.password-toggle-button {
+ position: absolute;
+ align-items: right;
+  right: 30%;
+  top: 52%; 
+  /* transform: translateY(-280%); */
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.form-email-password,
+.form-info,
+.form-addimage
+ {
+  border-color: var(--main-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  padding: 1.5rem 2rem;
+  gap: 0.625rem;
+  border: 2px solid var(--main-color); 
+  border-radius: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+}
+
+.form-email-password{
+  padding-right: 30px;
+}
+.form-info {
+  height: 0.7rem;
+}
+
+.form-textarea {
+  height: 4rem; 
+  resize: vertical; 
+}
+
+.form-addimage {
+  border: 2px solid var(--main-color);
+  background-color: var(--white);
+  height: 1.5rem;
+  justify-content: center; 
+}
+
+.error-message {
+  color: red; 
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  text-align: left;
+  width: 40%; 
+}
+
+@media screen and (max-width: 700px) {
+  .form-label,
+  .form-email-password,
+  .form-info,
+  .form-addimage,
+  .error-message {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+
+.password-toggle-button {
+  right: 3em;
+  top: 50%; 
+  transform: translateY(-680%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+}
