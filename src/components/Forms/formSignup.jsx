@@ -2,12 +2,14 @@ import "./forms.css";
 import { SignupButton } from "../Button";
 import { useState } from "react";
 import { useAuth } from "../../AuthContext";
+import { useNavigate } from "react-router";
 
 function FormSignup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const { signup } = useAuth();
+  const navigate = useNavigate();
 
   const isEmailValid = (email) => {
     const forbiddenChars = /[&=+\,<>']|\,{2,}/;
@@ -29,6 +31,7 @@ function FormSignup() {
     if (isEmailValid(email)) {
       const signUp = await signup(email, password);
       console.log(signUp);
+        navigate('/login?signup');
     } else {
       setEmailError(
         "Please, introduce a valid email without special characters."

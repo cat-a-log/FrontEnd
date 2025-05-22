@@ -46,6 +46,7 @@ function FormUpdateItem({item}) {
         id="itemName"
         className="form-info"
         type="text"
+        required
         placeholder="Ex: Christmas Lights"
         value={name}
         onChange={(event) => setName(event.target.value)}
@@ -59,6 +60,7 @@ function FormUpdateItem({item}) {
         id="quantity"
         className="form-info"
         type="number"
+        required
         placeholder="Ex: 25"
         value={quantity}
         onChange={(event) => setQuantity(event.target.value)}
