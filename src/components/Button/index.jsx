@@ -32,6 +32,10 @@ function UpdateBoxButton({ onClick }) {
   return <Button onClick={onClick}>UPDATE BOX</Button>;
 }
 
+function UpdateItemButton({ onClick }) {
+  return <Button onClick={onClick}>UPDATE ITEM</Button>;
+}
+
 function YesButton({ onClick }) {
   return <Button onClick={onClick}>YES</Button>;
 }
@@ -46,4 +50,4 @@ function NoButton({ onClick }) {
 
 
 export default Button;
-export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton, UpdateBoxButton, YesButton, DeleteBoxButton,  NoButton };
+export { SearchButton, CreateBoxButton, LoginButton, SignupButton, AddItemButton, UpdateBoxButton, UpdateItemButton, YesButton, DeleteBoxButton,  NoButton };

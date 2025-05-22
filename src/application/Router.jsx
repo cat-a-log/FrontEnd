@@ -8,6 +8,7 @@ import AddItem from "../pages/AddItem";
 import CreateBox from "../pages/CreateBox";
 import UpdateBox from "../pages/UpdateBox";
 import BoxDetails from "../pages/BoxDetails";
+import UpdateItem from "../pages/UpdateItem";
 import { AuthProvider } from "../AuthContext";
 import ProtectedRoute from "./ProtectedRoute";
 import Layout from "../Layout";
@@ -26,8 +27,9 @@ function Router() {
                 <Route path="search" element={<Search />} />
                 <Route path="createbox" element={<CreateBox />} />
                 <Route path="updatebox/:id" element={<UpdateBox />} />
-                <Route path="additem" element={<AddItem />} />
+                <Route path="additem/:id" element={<AddItem />} />
                 <Route path="boxdetails/:id" element={<BoxDetails />} />
+                <Route path="updateitem/:id" element={<UpdateItem />} />
             </Route>
           </Route>
         </Routes>

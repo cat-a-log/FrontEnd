@@ -1,20 +1,20 @@
 import "./forms.css";
-import { AddItemButton } from "../Button";
+import { UpdateItemButton } from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { postAPI, postAPIFormData } from "../../services/Api";
+import {patchAPIFormData} from "../../services/Api"
 
-function FormAddItem({ box }) {
+function FormUpdateItem({item}) {
   const navigate = useNavigate();
-  const [name, setName] = useState("");
-  const [quantity, setQuantity] = useState("");
+  const [name, setName] = useState(item.name);
+  const [quantity, setQuantity] = useState(item.quantity);
   const [nameError, setNameError] = useState("");
   const [quantityError, setQuantityError] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null); 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
+     const formData = new FormData();
     const itemRequestDto = {
       name: name,
       quantity: quantity,
@@ -26,9 +26,11 @@ function FormAddItem({ box }) {
     if (image) {
       formData.append("image", image);
     }
-    await postAPIFormData(`/box/${box.id}/item`, formData);
-    navigate(`/boxdetails/${box.id}`);
-  };
+    await patchAPIFormData(`/item/${item.id}`, formData);
+    navigate(`/boxdetails/${item.boxId}`);
+    
+  
+   };
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
@@ -50,16 +52,14 @@ function FormAddItem({ box }) {
       />
 
       <label htmlFor="quantity" className="form-label">
-        Quantity
+        Quantity 
       </label>
-      {quantityError && (
-        <p className="error-message">&#10006; {quantityError}</p>
-      )}
+      {quantityError && <p className="error-message">&#10006; {quantityError}</p>}
       <input
         id="quantity"
         className="form-info"
         type="number"
-        placeholder="Ex: 2,572"
+        placeholder="Ex: 25"
         value={quantity}
         onChange={(event) => setQuantity(event.target.value)}
       />
@@ -74,10 +74,10 @@ function FormAddItem({ box }) {
         onChange={handleImageChange}
       />
       <div className="button">
-        <AddItemButton />
+        <UpdateItemButton />
       </div>
     </form>
   );
 }
 
-export default FormAddItem;
+export default FormUpdateItem;

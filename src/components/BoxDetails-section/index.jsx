@@ -4,15 +4,15 @@ import AddItem from '../Item/add-item'
 import "./boxDetailsSection.css"
 
 
-function BoxDetailsSection({items}) {
+function BoxDetailsSection({items, box}) {
 
    return (
    <div className="search-section">
     <h3>My Items</h3>
      <div className="items">
-     <AddItem/>
+     <AddItem box = {box}/>
       {items.map(item => (
-       <Item key={item.id} item={item}/>
+       <Item key={item.id} item={item} box={box}/>
       ))}
     
     </div>
