@@ -14,6 +14,28 @@ function FormAddItem({ box }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+   
+    setNameError("");
+    setQuantityError("");
+
+    let hasError = false;
+
+    
+    if (!name.trim()) { 
+      setNameError("Item name cannot be empty.");
+      hasError = true;
+    }
+
+   
+    if (!quantity || quantity <= 0) {
+      setQuantityError("Quantity must be a positive number.");
+      hasError = true;
+    }
+
+    if (hasError) {
+      return; 
+    }
+
     const formData = new FormData();
     const itemRequestDto = {
       name: name,
@@ -43,6 +65,7 @@ function FormAddItem({ box }) {
       <input
         id="itemName"
         className="form-info"
+        required
         type="text"
         placeholder="Ex: Christmas Lights"
         value={name}
@@ -59,6 +82,7 @@ function FormAddItem({ box }) {
         id="quantity"
         className="form-info"
         type="number"
+        required
         placeholder="Ex: 2,572"
         value={quantity}
         onChange={(event) => setQuantity(event.target.value)}

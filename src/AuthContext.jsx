@@ -32,8 +32,6 @@ export const AuthProvider = ({ children }) => {
   const signup = async (email, password) => {
     try {
       await postAPI("/auth/signup", { email, password });
-      await getCurrentUser();
-      navigate('/home');
       return true;
     } catch {
       return false;
