@@ -8,7 +8,7 @@ function Item({item, box}) {
     const handleEdit = () => {
         navigate (`/updateitem/${item.id}`)
     }
-
+    const imageUrl = `http://localhost:8080/api/item/${item.id}/image`;
     const handleDelete = async () => {
          const itemId = item.id;
        if (window.confirm(`Are you sure do you want to delete the item: ${item.name}?`)) {
@@ -26,7 +26,7 @@ function Item({item, box}) {
     
    <div className="item-container">
         <div className="image-container">
-            <img src="/src/assets/item_christmas.png" alt="Christmas Lights"/>
+            <img src={imageUrl} alt={item.name}/>
         </div>
         <div className="info-container">
             <h2 className="title">{item.name}</h2>

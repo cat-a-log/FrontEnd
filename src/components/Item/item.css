@@ -1,7 +1,7 @@
 .item-container,
 .add-item-container {
   background-color: var(--itembackground-color);
-  /* width: 60%;  */
+  width: 40%; 
   border-radius: 20px;
   padding: 15px;
   display: flex;

@@ -1,4 +1,4 @@
-import SearchBar from '../components/SearchBar';
+
 import TitleHome from '../components/Titles/titleHome';
 import MyBoxesSection from '../components/MyBoxes-section';
 import { useEffect, useState } from 'react';
@@ -23,7 +23,7 @@ function Home() {
     
       <>
        <TitleHome/>
-       <SearchBar/>
+       
        <MyBoxesSection boxes = {boxes}/>
       
       </>

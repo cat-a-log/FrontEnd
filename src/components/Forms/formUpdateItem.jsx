@@ -2,7 +2,7 @@ import "./forms.css";
 import { UpdateItemButton } from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import {patchAPI} from "../../services/Api"
+import {patchAPIFormData} from "../../services/Api"
 
 function FormUpdateItem({item}) {
   const navigate = useNavigate();
@@ -14,35 +14,22 @@ function FormUpdateItem({item}) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await patchAPI(`/item/${item.id}`, {name, quantity,});
+     const formData = new FormData();
+    const itemRequestDto = {
+      name: name,
+      quantity: quantity,
+    };
+    formData.append(
+      "item",
+      new Blob([JSON.stringify(itemRequestDto)], { type: "application/json" })
+    );
+    if (image) {
+      formData.append("image", image);
+    }
+    await patchAPIFormData(`/item/${item.id}`, formData);
     navigate(`/boxdetails/${item.boxId}`);
     
-  //   const isValid = true;
-
-  //   if (name.trim() === "") {
-  //     setNameError("Item needs to be filled");
-  //     isValid = false;
-  //   } else {
-  //     setNameError("");
-  //   }
-
-  //   if (quantity.trim() === "") {
-  //     setQuantityError("Quantity needs to be filled");
-  //     isValid = false;
-  //   } else if (isNaN(quantity) || parseInt(quantity) <= 0) {
-  //     setQuantityError("Minimum quantity is 1");
-  //     isValid = false;
-  //   } else {
-  //     setQuantityError("");
-  //   }
-
-  //   if (isValid) {
-     
-  //     console.log("ok", { name, quantity, image });
-  //     setName("");
-  //     setQuantity("");
-  //     setImage(null);
-  //   }
+  
    };
 
   const handleImageChange = (event) => {

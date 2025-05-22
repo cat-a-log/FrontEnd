@@ -2,48 +2,33 @@ import "./forms.css";
 import { AddItemButton } from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import {postAPI} from "../../services/Api"
+import { postAPI, postAPIFormData } from "../../services/Api";
 
-function FormAddItem({box}) {
+function FormAddItem({ box }) {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [nameError, setNameError] = useState("");
   const [quantityError, setQuantityError] = useState("");
-  const [image, setImage] = useState(null); 
+  const [image, setImage] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await postAPI(`/box/${box.id}/item`, {name, quantity,});
+    const formData = new FormData();
+    const itemRequestDto = {
+      name: name,
+      quantity: quantity,
+    };
+    formData.append(
+      "item",
+      new Blob([JSON.stringify(itemRequestDto)], { type: "application/json" })
+    );
+    if (image) {
+      formData.append("image", image);
+    }
+    await postAPIFormData(`/box/${box.id}/item`, formData);
     navigate(`/boxdetails/${box.id}`);
-    
-  //   const isValid = true;
-
-  //   if (name.trim() === "") {
-  //     setNameError("Item needs to be filled");
-  //     isValid = false;
-  //   } else {
-  //     setNameError("");
-  //   }
-
-  //   if (quantity.trim() === "") {
-  //     setQuantityError("Quantity needs to be filled");
-  //     isValid = false;
-  //   } else if (isNaN(quantity) || parseInt(quantity) <= 0) {
-  //     setQuantityError("Minimum quantity is 1");
-  //     isValid = false;
-  //   } else {
-  //     setQuantityError("");
-  //   }
-
-  //   if (isValid) {
-     
-  //     console.log("ok", { name, quantity, image });
-  //     setName("");
-  //     setQuantity("");
-  //     setImage(null);
-  //   }
-   };
+  };
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
@@ -65,9 +50,11 @@ function FormAddItem({box}) {
       />
 
       <label htmlFor="quantity" className="form-label">
-        Quantity 
+        Quantity
       </label>
-      {quantityError && <p className="error-message">&#10006; {quantityError}</p>}
+      {quantityError && (
+        <p className="error-message">&#10006; {quantityError}</p>
+      )}
       <input
         id="quantity"
         className="form-info"

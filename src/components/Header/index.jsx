@@ -19,7 +19,7 @@ function Header() {
                 <Link to={"/signup"} className="divLink">Sign Up</Link>
             </div>
             :<div className="divPages">
-                <Link to={"/search"} className="divLink">Search</Link>
+                {/* <Link to={"/search"} className="divLink">Search</Link> */}
                 <Link to={"/createBox"} className="divLink">Create a Box</Link> 
                 <img className="profile-icon" src={Logged} alt="user logged icon" />    
             </div>
