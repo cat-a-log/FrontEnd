@@ -90,7 +90,6 @@ p, h4, .highlight-color-underline {
   }
 }
 
-/* boxdetails.css (or wherever you place your component-specific styles) */
 
 .confirm-popup-overlay {
   position: fixed;
@@ -98,15 +97,15 @@ p, h4, .highlight-color-underline {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure it's on top of other content */
+  z-index: 1000; 
 }
 
 .confirm-popup-content {
-  background-color: var(--background-color); /* Use your theme's background */
+  background-color: var(--background-color); 
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -118,7 +117,7 @@ p, h4, .highlight-color-underline {
 .confirm-popup-content p {
   margin-bottom: 25px;
   font-size: 1.1em;
-  color: var(--text-color); /* Use your theme's text color */
+  color: var(--text-color);
 }
 
 .confirm-popup-buttons {
@@ -138,7 +137,7 @@ p, h4, .highlight-color-underline {
 }
 
 .confirm-button.yes {
-  background-color: #dc3545; /* Red for delete confirmation */
+  background-color: #dc3545;  
   color: white;
 }
 
@@ -147,7 +146,7 @@ p, h4, .highlight-color-underline {
 }
 
 .confirm-button.no {
-  background-color: #6c757d; /* Grey for cancel */
+  background-color: #6c757d;  
   color: white;
 }
 
