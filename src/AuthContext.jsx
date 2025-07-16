@@ -38,11 +38,18 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+ const logout = async () => {
+    try {
+      setUser(null); 
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
   useEffect(() => {
     getCurrentUser();
   }, []);
   return (
-    <AuthContext.Provider value={{ user, loading, login, signup }}>
+    <AuthContext.Provider value={{ user, loading, login, signup, logout }}>
       {children}
     </AuthContext.Provider>
   );
