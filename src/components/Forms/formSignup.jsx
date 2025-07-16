@@ -3,11 +3,13 @@
 // import { useState } from "react";
 // import { useAuth } from "../../AuthContext";
 // import { useNavigate } from "react-router";
+// import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 // function FormSignup() {
 //   const [email, setEmail] = useState("");
 //   const [password, setPassword] = useState("");
 //   const [emailError, setEmailError] = useState("");
+//   const [showPassword, setShowPassword] = useState(false);
 //   const { signup } = useAuth();
 //   const navigate = useNavigate();
 
@@ -31,7 +33,7 @@
 //     if (isEmailValid(email)) {
 //       const signUp = await signup(email, password);
 //       console.log(signUp);
-//         navigate('/login?signup');
+//       navigate('/login?signup');
 //     } else {
 //       setEmailError(
 //         "Please, introduce a valid email without special characters."
@@ -52,17 +54,28 @@
 //         value={email}
 //         onChange={handleEmailChange}
 //       />
-//       {emailError && <p className="error-message">{emailError}</p>} {}
-//       <input
-//         className="form-email-password"
-//         type="password"
-//         required
-//         minLength="4"
-//         maxLength="30"
-//         placeholder={`\uD83D\uDD12 Password | Minimun 4 characters`}
-//         value={password}
-//         onChange={(event) => setPassword(event.target.value)}
-//       />
+//       {emailError && <p className="error-message">{emailError}</p>}
+
+//       <div className="password-input-container">
+//         <input
+//           className="form-email-password"
+//           type={showPassword ? "text" : "password"}
+//           required
+//           minLength="4"
+//           maxLength="30"
+//           placeholder={`\uD83D\uDD12 Password | Minimun 4 characters`}
+//           value={password}
+//           onChange={(event) => setPassword(event.target.value)}
+//         />
+//         <button
+//           type="button"
+//           className="password-toggle-button"
+//           onClick={() => setShowPassword(!showPassword)}
+//         >
+//           {showPassword ? <FaEyeSlash /> : <FaEye />}
+//         </button>
+//       </div>
+
 //       <div className="button">
 //         <SignupButton />
 //       </div>
@@ -84,36 +97,75 @@ function FormSignup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const { signup } = useAuth();
   const navigate = useNavigate();
 
   const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const forbiddenChars = /[&=+\,<>']|\,{2,}/;
-    return !forbiddenChars.test(email);
+    return emailRegex.test(email) && !forbiddenChars.test(email);
+  };
+
+  const isPasswordValid = (password) => {
+    const minLength = 4; 
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+
+    return (
+      password.length >= minLength &&
+      hasUpperCase &&
+      hasLowerCase &&
+      hasNumber
+    );
   };
 
   const handleEmailChange = (event) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
     if (!isEmailValid(newEmail)) {
-      setEmailError("These symbols are not allowed &, =, ', +, ,, <, >, .");
+      setEmailError("❌  Please introduce a valid email.");
     } else {
       setEmailError("");
     }
   };
 
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+    if (!isPasswordValid(newPassword)) {
+      setPasswordError(
+        "❌  The password must have at least 4 characters, including uppercase, lowercase and a number."
+      );
+    } else {
+      setPasswordError("");
+    }
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (isEmailValid(email)) {
-      const signUp = await signup(email, password);
-      console.log(signUp);
-      navigate('/login?signup');
-    } else {
-      setEmailError(
-        "Please, introduce a valid email without special characters."
+
+    const emailIsValid = isEmailValid(email);
+    const passwordIsValid = isPasswordValid(password);
+
+    if (!emailIsValid) {
+      setEmailError("Please introduce a valid email.");
+    }
+    if (!passwordIsValid) {
+      setPasswordError(
+        "The password must have at least 4 characters, including uppercase, lowercase and a number."
       );
-      console.log("the email content characters not valid.");
+    }
+
+    if (emailIsValid && passwordIsValid) {
+      try {
+        await signup(email, password);
+        navigate('/login?signup');
+      } catch (error) {
+        setEmailError("Error in the register. The email could be already in use or a problem with the conection.");
+      }
     }
   };
 
@@ -125,7 +177,7 @@ function FormSignup() {
         required
         minLength="7"
         maxLength="20"
-        placeholder={`\uD83D\uDCE7 Email | Ex: julia@prettywoman.com`}
+        placeholder={`📧 Email | Ej: julia@example.com`}
         value={email}
         onChange={handleEmailChange}
       />
@@ -138,9 +190,9 @@ function FormSignup() {
           required
           minLength="4"
           maxLength="30"
-          placeholder={`\uD83D\uDD12 Password | Minimun 4 characters`}
+          placeholder={`🔒 Password`}
           value={password}
-          onChange={(event) => setPassword(event.target.value)}
+          onChange={handlePasswordChange}
         />
         <button
           type="button"
@@ -150,6 +202,7 @@ function FormSignup() {
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </button>
       </div>
+      {passwordError && <p className="error-message">{passwordError}</p>}
 
       <div className="button">
         <SignupButton />
